@@ -1,4 +1,4 @@
-<?php include ('./header.php'); ?>
+<?php include ('header.php'); ?>
     <div class="section-image"></div>
     <main>
         <form method='POST' action='fight.php'>
@@ -105,4 +105,4 @@
             </div>
         </form>
     </main>
-<?php include ('./footer.php'); ?>
+<?php include ('footer.php'); ?>

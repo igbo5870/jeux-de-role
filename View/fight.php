@@ -1,4 +1,4 @@
-<?php include ('./header.php'); ?>
+<?php include ('header.php'); ?>
     <div class="section-image"></div>
     <section class="section-fight">
         <h2>Déroulé du combat</h2>
@@ -22,4 +22,4 @@
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil repellat accusamus odit magni perferendis esse, itaque labore rerum et dolore cumque quod, sunt, molestiae doloremque eveniet cupiditate beatae nostrum voluptates?</p>
         </div>
     </section>
-<?php include ('./footer.php'); ?>
+<?php include ('footer.php'); ?>
