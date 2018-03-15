@@ -4,11 +4,12 @@
         <h2>Déroulé du combat</h2>
         <hr/>
         <?php  
-            if( isset($_POST['submit']) )
+            if(!isset($_POST['submit']) )
             {
                 //be sure to validate and clean your variables
-                $val1 = htmlentities($_POST['field-1']);
-                echo $val1;
+                $name = $_POST['name'];
+                $type = $_POST['type'];
+                echo 'Nom : '.$name.' type: '.$type;
             }
             ?>
         <h2>Fin du combat</h2>

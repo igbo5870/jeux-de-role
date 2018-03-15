@@ -10,10 +10,10 @@
                         <div>
                             <h4>Personnage 1:</h4>
                             <div>
-                                <label for="field-perso1">Nom*:</label>
-                                <input type="text" id="field-perso1" name="name">
+                                <label for="field-perso1" >Nom*:</label>
+                                <input type="text" id="field-perso1" name="name" required>
                                 <span>Type*:</span>
-                                <select class="select" name="selectPerso1" id="select-perso1">
+                                <select class="select" name="type" id="select-perso1" required>
                                     <option value="magician">Magicien</option> 
                                     <option value="elf">Elfe</option>
                                     <option value="dwarf">Nain</option>
@@ -106,3 +106,4 @@
         </form>
     </main>
 <?php include ('footer.php'); ?>
+
