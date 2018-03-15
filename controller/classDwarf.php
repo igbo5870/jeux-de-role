@@ -1,8 +1,11 @@
 <?php
 
-class Dwarf extends Personnage
+/**
+ * create dwarf character
+ */
+class Dwarf extends Character
 {
     public function __construct($name){
-        parent::__construct($name, 125,'Ombre noir', 450, 'Nain');
+        parent::__construct($name, 450,'Ombre noir', 125, 'Nain');
     }  
 }

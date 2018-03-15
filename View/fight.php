@@ -1,9 +1,14 @@
 <?php include ('header.php'); 
-      include ('../controller/classPersonnage.php');
-      include ('../controller/classMage.php');
-      include ('../controller/classGuerrier.php');
+      include ('../controller/classCharacters.php');
+      include ('../controller/classMagician.php');
+      include ('../controller/classWarrior.php');
       include ('../controller/classDwarf.php');
       include ('../controller/classElf.php');
+      include ('../controller/classBlackMagus.php');
+      include ('../controller/classBlackShadow.php');
+      include ('../controller/classGoblin.php');
+      include ('../controller/classOrc.php');
+      include ('../controller/classSauron.php');
 
       ?>
     <div class="section-image"></div>
@@ -18,13 +23,13 @@
                 $typeHero = $_POST['classPerso1'];
 
                 switch($typeHero){
-                    case 'Magicien' : $hero1 = new Mage($nameHero);
+                    case 'Magicien' : $hero1 = new Magician($nameHero);
                         print_r($hero1) ;break;
-                    case 'Elfe' : $hero1 = new Elfe($nameHero);
+                    case 'Elfe' : $hero1 = new Elf($nameHero);
                         print_r($hero1);break;
                     case 'Nain' : $hero1 = new Dwarf($nameHero);
                         var_dump($hero1);break;
-                    case 'Guerrier' : $hero1 = new Guerrier($nameHero);
+                    case 'Guerrier' : $hero1 = new Warrior($nameHero);
                         var_dump($hero1);break;
                 }
 
@@ -33,15 +38,15 @@
                 $typeMonster = $_POST['selectPerso4'];
 
                 switch($typeMonster){
-                    case 'Mage noir' : $monster1 = new Mage($nameMonster);
+                    case 'Mage noir' : $monster1 = new BlackMagus($nameMonster);
                         print_r($monster1) ;break;
-                    case 'Orque' : $monster1 = new Elfe($nameMonster);
+                    case 'Orque' : $monster1 = new Orc($nameMonster);
                         print_r($monster1);break;
-                    case 'Gobelin' : $monster1 = new Dwarf($nameMonster);
+                    case 'Gobelin' : $monster1 = new Goblin($nameMonster);
                         var_dump($monster1);break;
-                    case 'Ombre noir' : $monster1 = new Guerrier($nameMonster);
+                    case 'Ombre noir' : $monster1 = new BlackShadow($nameMonster);
                         var_dump($monster1);break;
-                    case 'Sauron' : $monster1 = new Guerrier($nameMonster);
+                    case 'Sauron' : $monster1 = new Sauron($nameMonster);
                         var_dump($monster1);break;
                 }
             }

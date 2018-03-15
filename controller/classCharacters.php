@@ -1,20 +1,20 @@
 <?php
 /**
- * Créer un nouveau personnage avec des caractéristiques de base 
+ * Create a basis character
  */
-class Personnage
+class Character
 {
     protected $name;
     protected $life;
     protected $bonus;
-    protected $force;
+    protected $strength;
     protected $type;
 
-    public function __construct($name, $life, $bonus, $force, $type){
+    public function __construct($name, $life, $bonus, $strength, $type){
         $this->name = $name;
         $this->life = $life;
         $this->bonus = $bonus;
-        $this->force = $force;
+        $this->strength = $strength;
         $this->type = $type;
     }  
     /**
@@ -40,8 +40,8 @@ class Personnage
      *
      * @return int force
      */
-    public function __getForce(){
-        return $this->force;
+    public function __getStrength(){
+        return $this->strength;
     }
 
     /**
@@ -60,6 +60,6 @@ class Personnage
      * @return void
      */
     public function attaquer($cible){
-        $cible->life -= ($this->force + $this->bonus);
+        $cible->life -= ($this->strength + $this->bonus);
     }
 }
