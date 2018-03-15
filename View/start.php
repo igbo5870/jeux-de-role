@@ -13,7 +13,7 @@
                                 <label for="field-perso1" >Nom*:</label>
                                 <input type="text" id="field-perso1" name="name" required>
                                 <span>Type*:</span>
-                                <select class="select" name="type" id="select-perso1" required>
+                                <select class="select" name="type" id="type" required>
                                     <option value="magician">Magicien</option> 
                                     <option value="elf">Elfe</option>
                                     <option value="dwarf">Nain</option>

@@ -1,4 +1,11 @@
-<?php include ('header.php'); ?>
+<?php include ('header.php'); 
+      include ('../controller/classPersonnage.php');
+      include ('../controller/classMage.php');
+      include ('../controller/classGuerrier.php');
+      include ('../controller/classDwarf.php');
+      include ('../controller/classElf.php');
+
+      ?>
     <div class="section-image"></div>
     <section class="section-fight">
         <h2>Déroulé du combat</h2>
@@ -9,9 +16,19 @@
                 //be sure to validate and clean your variables
                 $name = $_POST['name'];
                 $type = $_POST['type'];
-                echo 'Nom : '.$name.' type: '.$type;
+
+                switch($type){
+                    case 'magician' : $perso1 = new Mage($name);
+                        var_dump($perso1) ;break;
+                    case 'elf' : $perso1 = new Elfe($name);
+                    var_dump($perso1);break;
+                    case 'dwarf' : $perso1 = new Dwarf($name);
+                        var_dump($perso1);break;
+                    case 'war' : $perso1 = new Guerrier($name);
+                    var_dump($perso1);break;
+                }
             }
-            ?>
+        ?>
         <h2>Fin du combat</h2>
         <hr/>
         <div class="result-fight">
