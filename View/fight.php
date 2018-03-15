@@ -12,6 +12,74 @@
                 echo 'Nom : '.$name.' type: '.$type;
             }
             ?>
+        <div class="action">
+            <div class="action-title">
+                <p class="action-number">Action 1</p>
+                <p class="action-whoAttack">Gandalf attaque Sarouman</p>
+                
+            </div>
+            <p class="number-damage">Coup portée: 25</p>
+            <div class="fight-character">
+                <div class="fight-heros">
+                    <p>Héros:</p>
+                    <table style="width:100%">
+                        <tr>
+                            <th>Nom</th>
+                            <th>Type</th>
+                            <th>Niveau</th>
+                            <th>Vie</th>
+                        </tr>
+                        <tr>
+                            <td>Gandalf</td>
+                            <td>Magician</td>
+                            <td>2</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>Gimli</td>
+                            <td>Nain</td>
+                            <td>1</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>Legolas</td>
+                            <td>Elfe</td>
+                            <td>1</td>
+                            <td>100%</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="fight-monsters">
+                    <p>Monstres:</p>
+                    <table style="width:100%">
+                        <tr>
+                            <th>Nom</th>
+                            <th>Type</th>
+                            <th>Niveau</th>
+                            <th>Vie</th>
+                        </tr>
+                        <tr>
+                            <td>Sarouman</td>
+                            <td>Magician</td>
+                            <td>1</td>
+                            <td>50%</td>
+                        </tr>
+                        <tr>
+                            <td>Sauron</td>
+                            <td>Nain</td>
+                            <td>1</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>Roger rabbit</td>
+                            <td>Big boss</td>
+                            <td>1</td>
+                            <td>100%</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>    
         <h2>Fin du combat</h2>
         <hr/>
         <div class="result-fight">
