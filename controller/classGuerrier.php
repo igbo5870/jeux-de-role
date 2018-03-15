@@ -8,7 +8,8 @@
 class Guerrier extends Personnage
 {
     public function __construct($name){
-        parent::__construct($name, 350,'Ombre noir', 200, 'Guerrier');
+        $force = random(100, 400);
+        parent::__construct($name, $force,'Ombre noir', 200, 'Guerrier');
     }  
 }
 

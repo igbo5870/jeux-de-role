@@ -121,7 +121,7 @@ main {
     align-items: center;
 }
 
-.startGame button {
+.startGame .class-button {
     background-color: #666666;
     border: 0;
     color: white;
