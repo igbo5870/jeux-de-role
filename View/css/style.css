@@ -1,0 +1,160 @@
+/****************/
+/*    GLOBAL    */
+/****************/
+
+body {
+    margin: 0;
+    font-family: 'Cantarell', sans-serif;
+}
+
+hr {
+    margin-left: 48%;
+    margin-right: 48%;
+}
+
+h2 {
+    text-align: center;
+}
+
+/****************/
+/*    HEADER    */
+/****************/
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    height: 8em;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo p {
+    color: white;
+}
+
+.header-button {
+    display: flex;
+    align-items: center;
+    padding-right: 0.6em;
+}
+
+header button {
+    height: 2em;
+}
+
+/****************/
+/*    HOMEPAGE  */
+/*    SECTION   */
+/****************/
+
+.section-homepage {
+    background-image: url('../image/BfA.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.section-homepage h1 {
+    text-align: center;
+    padding-top: 4em;
+    margin: 0;
+    font-size: 3rem;
+    color: white;
+}
+
+.section-homepage button {
+    width: 20%;
+    height: 3em;
+    margin: 3em 40% 12em 40%;
+    background-color: black;
+    color: white;
+    border: 0;
+}
+
+/****************/
+/*    DIV IMG   */
+/* START & FIGHT*/
+/****************/
+
+.section-image {
+    background-image: url('../image/banner.png');
+    height: 12em;
+    background-size: cover;
+}
+
+/****************/
+/*  START PAGE  */
+/****************/
+
+main {
+    margin: 0 15% 2em 15%;
+}
+
+.section-start {
+    display: flex;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+.section-start h3 {
+    margin-top: 0;
+}
+
+.heros {
+    width: 50%;
+}
+
+.monster {
+    border-left: 1px solid black;
+    padding-left: 1%;
+}
+
+.select {
+    background-color: #fff;
+}
+
+.startGame {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.startGame button {
+    background-color: #666666;
+    border: 0;
+    color: white;
+    width: 15%;
+    height: 2em;
+}
+
+/****************/
+/*  FIGHT PAGE  */
+/****************/
+
+.section-fight {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.result-fight {
+    text-align: center;
+    border: 1px solid grey;
+}
+
+.section-fight--text {
+    display: flex;
+}
+
+/****************/
+/*    FOOTER    */
+/****************/
+
+footer {
+    padding-top: 0.8em;
+    text-align: center;
+    height: 8em;
+    color: white;
+    background-color: black;  
+}
