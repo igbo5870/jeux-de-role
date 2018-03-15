@@ -18,27 +18,30 @@
                 $typeHero = $_POST['classPerso1'];
 
                 switch($typeHero){
-                    case 'magician' : $hero1 = new Mage($nameHero);
+                    case 'Magicien' : $hero1 = new Mage($nameHero);
                         print_r($hero1) ;break;
-                    case 'elf' : $hero1 = new Elfe($nameHero);
+                    case 'Elfe' : $hero1 = new Elfe($nameHero);
                         print_r($hero1);break;
-                    case 'dwarf' : $hero1 = new Dwarf($nameHero);
+                    case 'Nain' : $hero1 = new Dwarf($nameHero);
                         var_dump($hero1);break;
-                    case 'war' : $hero1 = new Guerrier($nameHero);
+                    case 'Guerrier' : $hero1 = new Guerrier($nameHero);
                         var_dump($hero1);break;
                 }
 
+                // Data monster
                 $nameMonster = $_POST['monster1'];
                 $typeMonster = $_POST['selectPerso4'];
 
                 switch($typeMonster){
-                    case 'magician' : $monster1 = new Mage($nameMonster);
+                    case 'Mage noir' : $monster1 = new Mage($nameMonster);
                         print_r($monster1) ;break;
-                    case 'elf' : $monster1 = new Elfe($nameMonster);
+                    case 'Orque' : $monster1 = new Elfe($nameMonster);
                         print_r($monster1);break;
-                    case 'dwarf' : $monster1 = new Dwarf($nameMonster);
+                    case 'Gobelin' : $monster1 = new Dwarf($nameMonster);
                         var_dump($monster1);break;
-                    case 'war' : $monster1 = new Guerrier($nameMonster);
+                    case 'Ombre noir' : $monster1 = new Guerrier($nameMonster);
+                        var_dump($monster1);break;
+                    case 'Sauron' : $monster1 = new Guerrier($nameMonster);
                         var_dump($monster1);break;
                 }
             }
@@ -46,7 +49,7 @@
         <div class="action">
             <div class="action-title">
                 <p class="action-number">Action 1</p>
-                <p class="action-whoAttack"><?php echo $nameHero;?> attaque Sarouman</p>
+                <p class="action-whoAttack"><?php echo $nameHero;?> attaque <?php echo $nameMonster?></p>
                 
             </div>
             <p class="number-damage">Coup portée: 25</p>
@@ -90,10 +93,10 @@
                             <th>Vie</th>
                         </tr>
                         <tr>
-                            <td><?php echo $nameNomster ?></td>
+                            <td><?php echo $nameMonster ?></td>
                             <td><?php echo $typeMonster ?></td>
                             <td>1</td>
-                            <td><?php $monster1->__getLife ?></td>
+                            <td><?php echo $monster1->__getLife() ?></td>
                         </tr>
                         <tr>
                             <td>-</td>
