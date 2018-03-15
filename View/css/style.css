@@ -35,14 +35,21 @@ header {
     color: white;
 }
 
-.header-button {
+.header-returnAccueil {
     display: flex;
     align-items: center;
     padding-right: 0.6em;
 }
 
-header button {
+.header-returnAccueil a {
     height: 2em;
+    color: white;
+    padding-right: 2em;
+    text-decoration: none;
+}
+
+.header-returnAccueil a:hover {
+    color: red;
 }
 
 /****************/
@@ -54,9 +61,12 @@ header button {
     background-image: url('../image/BfA.jpg');
     background-size: cover;
     background-attachment: fixed;
+    box-shadow: inset 0 0 1em red;
+    padding-bottom: 6em;
 }
 
 .section-homepage h1 {
+    font-family: 'Cagliostro', sans-serif;
     text-align: center;
     padding-top: 4em;
     margin: 0;
@@ -64,13 +74,25 @@ header button {
     color: white;
 }
 
-.section-homepage button {
-    width: 20%;
-    height: 3em;
-    margin: 3em 40% 12em 40%;
+h1 {
+    text-shadow: 0 5px 0 black;
+}
+
+.section-homepage a {
+    margin: 3em 35% 0 35%;
+    width: 30%;
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: black;
     color: white;
     border: 0;
+    text-decoration: none;
+}
+
+.section-homepage a:hover {
+    box-shadow: inset 0 0 1em red;
 }
 
 /****************/

@@ -1,4 +1,4 @@
-<?php include ('../header.php'); ?>
+<?php include ('header.php'); ?>
     <div class="section-image"></div>
     <main>
         <h2>Créez vos équipes</h2>
@@ -103,4 +103,4 @@
                 <button>Commencer</button>
         </div>
     </main>
-<?php include ('../footer.php'); ?>
+<?php include ('footer.php'); ?>

@@ -1,6 +1,6 @@
-<?php include ('../header.php'); ?>
+<?php include ('header.php'); ?>
     <section class="section-homepage">
         <h1>Le choc des Simploniens!</h1>
-        <button>Commencer le combat</button>
+        <a href="start.php">Commencer le combat</a>
     </section>
-<?php include ('../footer.php'); ?>
+<?php include ('footer.php'); ?>
