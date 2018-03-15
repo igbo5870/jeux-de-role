@@ -124,11 +124,21 @@ main {
     margin-top: 0;
 }
 
+.section-start h4 {
+    margin-bottom: 0;
+}
+
 .heros {
     width: 50%;
 }
 
+.section-start label {
+    display: inline-block;
+    width: 12%;
+}
+
 .monster {
+    width: 49%;
     border-left: 1px solid black;
     padding-left: 1%;
 }
