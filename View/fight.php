@@ -13,22 +13,104 @@
         <?php  
             if(!isset($_POST['submit']) )
             {
-                //be sure to validate and clean your variables
-                $name = $_POST['name'];
-                $type = $_POST['type'];
+                //Data hero
+                $nameHero = $_POST['perso1'];
+                $typeHero = $_POST['classPerso1'];
 
-                switch($type){
-                    case 'magician' : $perso1 = new Mage($name);
-                        var_dump($perso1) ;break;
-                    case 'elf' : $perso1 = new Elfe($name);
-                    var_dump($perso1);break;
-                    case 'dwarf' : $perso1 = new Dwarf($name);
-                        var_dump($perso1);break;
-                    case 'war' : $perso1 = new Guerrier($name);
-                    var_dump($perso1);break;
+                switch($typeHero){
+                    case 'magician' : $hero1 = new Mage($nameHero);
+                        print_r($hero1) ;break;
+                    case 'elf' : $hero1 = new Elfe($nameHero);
+                        print_r($hero1);break;
+                    case 'dwarf' : $hero1 = new Dwarf($nameHero);
+                        var_dump($hero1);break;
+                    case 'war' : $hero1 = new Guerrier($nameHero);
+                        var_dump($hero1);break;
+                }
+
+                $nameMonster = $_POST['monster1'];
+                $typeMonster = $_POST['selectPerso4'];
+
+                switch($typeMonster){
+                    case 'magician' : $monster1 = new Mage($nameMonster);
+                        print_r($monster1) ;break;
+                    case 'elf' : $monster1 = new Elfe($nameMonster);
+                        print_r($monster1);break;
+                    case 'dwarf' : $monster1 = new Dwarf($nameMonster);
+                        var_dump($monster1);break;
+                    case 'war' : $monster1 = new Guerrier($nameMonster);
+                        var_dump($monster1);break;
                 }
             }
-        ?>
+            ?>
+        <div class="action">
+            <div class="action-title">
+                <p class="action-number">Action 1</p>
+                <p class="action-whoAttack"><?php echo $nameHero;?> attaque Sarouman</p>
+                
+            </div>
+            <p class="number-damage">Coup portée: 25</p>
+            <div class="fight-character">
+                <div class="fight-heros">
+                    <p>Héros:</p>
+                    <table style="width:100%">
+                        <tr>
+                            <th>Nom</th>
+                            <th>Type</th>
+                            <th>Niveau</th>
+                            <th>Vie</th>
+                        </tr>
+                        <tr>
+                            <td><?php echo $nameHero ?></td>
+                            <td><?php echo $typeHero ?></td>
+                            <td>2</td>
+                            <td><?php echo $hero1->__getLife() ?></td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="fight-monsters">
+                    <p>Monstres:</p>
+                    <table style="width:100%">
+                        <tr>
+                            <th>Nom</th>
+                            <th>Type</th>
+                            <th>Niveau</th>
+                            <th>Vie</th>
+                        </tr>
+                        <tr>
+                            <td><?php echo $nameNomster ?></td>
+                            <td><?php echo $typeMonster ?></td>
+                            <td>1</td>
+                            <td><?php $monster1->__getLife ?></td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>    
         <h2>Fin du combat</h2>
         <hr/>
         <div class="result-fight">

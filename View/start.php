@@ -11,9 +11,9 @@
                             <h4>Personnage 1:</h4>
                             <div>
                                 <label for="field-perso1" >Nom*:</label>
-                                <input type="text" id="field-perso1" name="name" required>
+                                <input type="text" id="field-perso1" name="perso1" required>
                                 <span>Type*:</span>
-                                <select class="select" name="type" id="type" required>
+                                <select class="select" name="classPerso1" id="idPerso1" required>
                                     <option value="magician">Magicien</option> 
                                     <option value="elf">Elfe</option>
                                     <option value="dwarf">Nain</option>
@@ -56,7 +56,7 @@
                             <h4>Personnage 1:</h4>
                             <div>
                                 <label for="field-perso4">Nom*:</label>
-                                <input type="text" id="field-perso4">
+                                <input type="text"name='monster1' id="field-perso4">
                                 <span>Type*:</span>
                                 <select class="select" name="selectPerso4" id="select-perso4">
                                     <option value="magus">Mage noir</option> 
