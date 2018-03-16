@@ -45,7 +45,11 @@ class Character
      * @return integer life
      */
     public function __getLife(){
-        return $this->life;
+        if($this->life <= 0){
+            return $this->life =0;
+        }else{
+            return $this->life;
+        }
     }
 
     /**
