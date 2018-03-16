@@ -22,7 +22,7 @@
                 //Data hero
                 $nameHero = $_POST['perso1'];
                 $typeHero = $_POST['classPerso1'];
-
+                
                 switch($typeHero){
                     case 'Magicien' : $hero1 = new Magician($nameHero);
                         print_r($hero1) ;break;
@@ -52,13 +52,14 @@
                 }
             }
             ?>
+        <!-- Action 1 <<<< BEGIN >>>> -->
         <div class="action">
             <div class="action-title">
                 <p class="action-number">Action 1</p>
                 <p class="action-whoAttack"><?php echo $nameHero;?> attaque <?php echo $nameMonster?></p>
                 
             </div>
-            <p class="number-damage">Coup portée: 25</p>
+            <p class="number-damage">Coup portée: <?php $hero1->attaquer($monster1); ?></p>
             <div class="fight-character">
                 <div class="fight-heros">
                     <p>Héros:</p>
@@ -72,7 +73,7 @@
                         <tr>
                             <td><?php echo $nameHero ?></td>
                             <td><?php echo $typeHero ?></td>
-                            <td>2</td>
+                            <td></td>
                             <td><?php echo $hero1->__getLife() ?></td>
                         </tr>
                         <tr>
@@ -119,7 +120,148 @@
                     </table>
                 </div>
             </div>
-        </div>    
+        </div> 
+        <!-- Action 1 <<<< END >>>> -->
+        <!-- Action 2 <<<< BEGIN >>>> -->   
+        <div class="action">
+            <div class="action-title">
+                <p class="action-number">Action 2</p>
+                <p class="action-whoAttack"><?php echo $nameMonster;?> attaque <?php echo $nameHero?></p>
+                
+            </div>
+            <p class="number-damage">Coup portée: <?php $monster1->attaquer($hero1); ?></p>
+            <div class="fight-character">
+                <div class="fight-heros">
+                    <p>Héros:</p>
+                    <table style="width:100%">
+                        <tr>
+                            <th>Nom</th>
+                            <th>Type</th>
+                            <th>Niveau</th>
+                            <th>Vie</th>
+                        </tr>
+                        <tr>
+                            <td><?php echo $nameHero ?></td>
+                            <td><?php echo $typeHero ?></td>
+                            <td></td>
+                            <td><?php echo $hero1->__getLife() ?></td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="fight-monsters">
+                    <p>Monstres:</p>
+                    <table style="width:100%">
+                        <tr>
+                            <th>Nom</th>
+                            <th>Type</th>
+                            <th>Niveau</th>
+                            <th>Vie</th>
+                        </tr>
+                        <tr>
+                            <td><?php echo $nameMonster ?></td>
+                            <td><?php echo $typeMonster ?></td>
+                            <td>1</td>
+                            <td><?php echo $monster1->__getLife() ?></td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div> 
+        <!-- Action 2 <<<< END >>>> -->
+        <!-- Action 3 <<<< BEGIN >>>>-->
+        <div class="action">
+            <div class="action-title">
+                <p class="action-number">Action 3</p>
+                <p class="action-whoAttack"><?php echo $nameHero;?> attaque <?php echo $nameMonster?></p>
+                
+            </div>
+            <p class="number-damage">Coup portée: <?php $hero1->attaquer($monster1); ?></p>
+            <div class="fight-character">
+                <div class="fight-heros">
+                    <p>Héros:</p>
+                    <table style="width:100%">
+                        <tr>
+                            <th>Nom</th>
+                            <th>Type</th>
+                            <th>Niveau</th>
+                            <th>Vie</th>
+                        </tr>
+                        <tr>
+                            <td><?php echo $nameHero ?></td>
+                            <td><?php echo $typeHero ?></td>
+                            <td></td>
+                            <td><?php echo $hero1->__getLife() ?></td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="fight-monsters">
+                    <p>Monstres:</p>
+                    <table style="width:100%">
+                        <tr>
+                            <th>Nom</th>
+                            <th>Type</th>
+                            <th>Niveau</th>
+                            <th>Vie</th>
+                        </tr>
+                        <tr>
+                            <td><?php echo $nameMonster ?></td>
+                            <td><?php echo $typeMonster ?></td>
+                            <td>1</td>
+                            <td><?php echo $monster1->__getLife() ?></td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div> 
+        <!-- Action 3 <<<< END >>>> -->
         <h2>Fin du combat</h2>
         <hr/>
         <div class="result-fight">

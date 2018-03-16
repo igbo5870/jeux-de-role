@@ -21,7 +21,7 @@ class Character
     protected $strengthMax;
     protected $type;
 
-    public function __construct($name, $life, $bonus, $strengthMin, $strenghMax, $type){
+    public function __construct($name, $life, $bonus, $strengthMin, $strengthMax, $type){
         $this->name = $name;
         $this->life = $life;
         $this->bonus = $bonus;
@@ -82,6 +82,9 @@ class Character
      * @return void
      */
     public function attaquer($cible){
-        $cible->life -= ($this->strength);
+        $rand = rand($this->__getStrengthMin(), $this->__getStrengthMax());
+        echo $rand;
+
+        $cible->life -= $rand ;
     }
 }
