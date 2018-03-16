@@ -4,6 +4,7 @@
         <form method='POST' action='fight.php'>
             <h2>Créez vos équipes</h2>
             <hr/>
+            <a class="moreInfo" href="infocharacter.php">Plus d'info sur le jeu</a>
             <div class="section-start">
                 <div class="heros">
                     <h3>Les héros</h3>

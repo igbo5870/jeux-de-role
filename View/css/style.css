@@ -108,6 +108,7 @@ h1 {
 
 /****************/
 /*  START PAGE  */
+/* INFOCARACTER */
 /****************/
 
 main {
@@ -118,6 +119,23 @@ main {
     display: flex;
     margin-bottom: 2em;
     margin-top: 2em;
+}
+
+.moreInfo, .returnPage-start {
+    margin: 1em 35% 0 35%;
+    width: 30%;
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    border: 0;
+    text-decoration: none;
+}
+
+.moreInfo:hover, .returnPage-start:hover {
+    box-shadow: inset 0 0 1em red;
 }
 
 .section-start h3 {
@@ -172,6 +190,7 @@ main {
 
 .action {
     border: 1px solid black;
+    margin-bottom: 2em;
 }
 
 .action-title{
@@ -224,7 +243,7 @@ main {
     margin: 0 1% 0 1%;
 }
 
-table, th, td {
+th, td {
     text-align: left;
     border: 1px solid #666666;
 }
