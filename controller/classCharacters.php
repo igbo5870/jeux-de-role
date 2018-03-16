@@ -2,6 +2,16 @@
 /**
  * Create a basis character
  */
+
+ /////////////////////////////////////////////////////////////////////////////////// 
+ //                                      TODO                                     //
+ //  ///////////////////////////////////////////////////////////////////////////  //                                                                             //
+ // - Mettre la plage de force à tous les monde avec une force min et force max   //
+ // - Faire une fiche qui présente les caractéristique des personnages            //
+ // - Faire calculer les bonus suivant l'équipe                                   //
+ // - Faire le combat                                                             //
+ //                                                                               //
+ ///////////////////////////////////////////////////////////////////////////////////
 class Character
 {
     protected $name;
@@ -60,6 +70,6 @@ class Character
      * @return void
      */
     public function attaquer($cible){
-        $cible->life -= ($this->strength + $this->bonus);
+        $cible->life -= ($this->strength);
     }
 }

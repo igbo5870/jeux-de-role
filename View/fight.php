@@ -16,6 +16,7 @@
         <h2>Déroulé du combat</h2>
         <hr/>
         <?php  
+    
             if(!isset($_POST['submit']) )
             {
                 //Data hero
