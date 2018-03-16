@@ -7,15 +7,18 @@ class Character
     protected $name;
     protected $life;
     protected $bonus;
-    protected $strength;
+    protected $strengthMin;
+    protected $strengthMax;
     protected $type;
 
-    public function __construct($name, $life, $bonus, $strength, $type){
+    public function __construct($name, $life, $bonus, $strengthMin, $strenghMax, $type){
         $this->name = $name;
         $this->life = $life;
         $this->bonus = $bonus;
-        $this->strength = $strength;
+        $this->strengthMin = $strengthMin;
+        $this->strengthMax = $strengthMax;
         $this->type = $type;
+        
     }  
     /**
      * Fonction qui permet de récupérer le nom du personnage 
@@ -36,12 +39,21 @@ class Character
     }
 
     /**
-     * Récupère la valeurs force du personnage
+     * Récupère la valeurs min de la force du personnage
      *
      * @return int force
      */
-    public function __getStrength(){
-        return $this->strength;
+    public function __getStrengthMin(){
+        return $this->strengthMin;
+    }
+
+        /**
+     * Récupère la valeurs max de la force du personnage
+     *
+     * @return int force
+     */
+    public function __getStrengthMax(){
+        return $this->strengthMax;
     }
 
     /**
