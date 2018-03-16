@@ -25,13 +25,13 @@
                 
                 switch($typeHero){
                     case 'Magicien' : $hero1 = new Magician($nameHero);
-                        print_r($hero1) ;break;
+                        ;break;
                     case 'Elfe' : $hero1 = new Elf($nameHero);
-                        print_r($hero1);break;
+                        ;break;
                     case 'Nain' : $hero1 = new Dwarf($nameHero);
-                        var_dump($hero1);break;
+                        ;break;
                     case 'Guerrier' : $hero1 = new Warrior($nameHero);
-                        var_dump($hero1);break;
+                        ;break;
                 }
 
                 // Data monster
@@ -40,15 +40,15 @@
 
                 switch($typeMonster){
                     case 'Mage noir' : $monster1 = new BlackMagus($nameMonster);
-                        print_r($monster1) ;break;
+                        ;break;
                     case 'Orque' : $monster1 = new Orc($nameMonster);
-                        print_r($monster1);break;
+                        ;break;
                     case 'Gobelin' : $monster1 = new Goblin($nameMonster);
-                        var_dump($monster1);break;
+                        ;break;
                     case 'Ombre noir' : $monster1 = new BlackShadow($nameMonster);
-                        var_dump($monster1);break;
+                        ;break;
                     case 'Sauron' : $monster1 = new Sauron($nameMonster);
-                        var_dump($monster1);break;
+                        ;break;
                 }
             }
             ?>
@@ -73,7 +73,7 @@
                         <tr>
                             <td><?php echo $nameHero ?></td>
                             <td><?php echo $typeHero ?></td>
-                            <td></td>
+                            <td><?php echo "1";?></td>
                             <td><?php echo $hero1->__getLife() ?></td>
                         </tr>
                         <tr>
@@ -143,7 +143,7 @@
                         <tr>
                             <td><?php echo $nameHero ?></td>
                             <td><?php echo $typeHero ?></td>
-                            <td></td>
+                            <td>1</td>
                             <td><?php echo $hero1->__getLife() ?></td>
                         </tr>
                         <tr>
@@ -213,7 +213,7 @@
                         <tr>
                             <td><?php echo $nameHero ?></td>
                             <td><?php echo $typeHero ?></td>
-                            <td></td>
+                            <td>1</td>
                             <td><?php echo $hero1->__getLife() ?></td>
                         </tr>
                         <tr>
