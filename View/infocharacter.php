@@ -89,7 +89,7 @@
                 <td>-</td>
             </tr>
         </table>
-        <a class="returnPage-start" href="start.php">"Créez vos équipes".</a>
+        <a class="returnPage-start" href="start.php">"Créez vos équipes"</a>
     </section>
 </main>
 <?php include ('footer.php'); ?>
