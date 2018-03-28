@@ -3,5 +3,7 @@
         <hr/>
         <p>Simplon.co | Github Simplon Rodez</p>
     </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

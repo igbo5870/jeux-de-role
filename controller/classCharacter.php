@@ -45,7 +45,11 @@ class Character
      * @return integer life
      */
     public function __getLife(){
-        return $this->life;
+        if($this->life <= 0){
+            return $this->life =0;
+        }else{
+            return $this->life;
+        }
     }
 
     /**
@@ -75,6 +79,10 @@ class Character
         return $this->type;
     }
 
+    public function __getBonus(){
+        return $this->bonus;
+    }
+
     /**
      * Fonction qui permet à un personnage d'attaquer un autre personnage
      * et de lui faire des dégâts.
@@ -83,8 +91,12 @@ class Character
      */
     public function attaquer($cible){
         $rand = rand($this->__getStrengthMin(), $this->__getStrengthMax());
-        echo $rand;
-
-        $cible->life -= $rand ;
+        if ($cible->__getType() == $this->bonus) {
+           $cible->life -= ($rand * 1.5);
+            echo ($rand * 1.5);
+        }else{
+            $cible->life -= $rand ;
+            echo $rand;
+        }       
     }
 }

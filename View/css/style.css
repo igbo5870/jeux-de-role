@@ -198,6 +198,10 @@ main {
     align-items: center;
 }
 
+.action-title img {
+
+}
+
 .action-number {
     display: flex;
     justify-content: center;
@@ -219,6 +223,7 @@ main {
     width: 90%;
     height: 3em;
     border-bottom: 1px solid black;
+    justify-content: space-between;
 }
 
 .number-damage {
