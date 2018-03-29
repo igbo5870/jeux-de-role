@@ -93,12 +93,11 @@ class Character
         $rand = rand($this->__getStrengthMin(), $this->__getStrengthMax());
         if ($cible->__getType() == $this->bonus) {
            $cible->life -= ($rand * 1.5);
-            echo ($rand * 1.5);
-            echo " " . $cible->life;
+            return ($rand * 1.5);
+            
         }else{
-            $cible->life -= $rand ;
-            echo $rand;
-            echo " " . $cible->life;
+            $cible->life -= $rand;
+            return $rand;
         }       
     }
 }

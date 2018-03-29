@@ -4,10 +4,6 @@
     $i = 0;
     while($statutLife === true) {
         $i++;
-        if($monster1->__getLife() <= 0 || $hero1->__getLife() <= 0){        
-            $statutLife = false;
-           
-        }   
 ?>
 
 <div class="action">
@@ -18,10 +14,13 @@
         <?php if($i%2 != 0){ ?>
         <p class="action-whoAttack">
             <?php
-                if ($hero1->__getLife() <= 0) {             
-                    echo $nameMonster ." attaque ". $nameHero .", ". $nameHero .' est mort!';
+                $attak = $hero1->attaquer($monster1);
+                $lifeLess = $monster1->__getLife();
+                if ( $lifeLess <= 0) {             
+                    echo $nameHero ." attaque ". $nameMonster .", ". $nameMonster .' est mort!';
+                    $statutLife = false;
                 }else{
-                    echo $nameMonster ." attaque ". $nameHero;
+                    echo $nameHero ." attaque ". $nameMonster;
                 }
             ?>
             <img class="icones" src="image/iconedown.png" alt="details visible" width= "30" height="30">
@@ -31,15 +30,18 @@
     <!-- Action odd 'impair' <<<< BEGIN >>>> -->    
     <div class="notvisible">
         <p class="number-damage">Coup portée: 
-        <?php echo $hero1->attaquer($monster1); ?>
+        <?php echo $attak; ?>
         </p>
         <?php 
         }else{
         ?>
         <p class="action-whoAttack">
             <?php
-                if ($monster1->__getLife() <= 0) {             
-                    echo $nameMonster ." attaque ". $nameHero .", ". $nameMonster .' est mort!';
+                $attak = $monster1->attaquer($hero1);
+                $lifeLess = $hero1->__getLife();
+                if ($lifeLess === 0) {             
+                    echo $nameMonster ." attaque ". $nameHero.", ". $nameHero .' est mort!';
+                    $statutLife = false;
                 }else{
                     echo $nameMonster ." attaque ". $nameHero;
                 }
@@ -53,7 +55,7 @@
     <div class="notvisible">
         <p class="number-damage">
             Coup portée: 
-            <?php echo $monster1->attaquer($hero1); ?>
+            <?php echo $attak; ?>
         </p>
         <?php }?>
         <div class="fight-character">
