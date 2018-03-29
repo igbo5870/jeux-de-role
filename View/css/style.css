@@ -262,6 +262,12 @@ th, td {
     display: flex;
 }
 
+.statusCharacter {
+    text-align: center;
+    border: 1px solid black;
+    background-color: red;
+}
+
 /****************/
 /*    FOOTER    */
 /****************/

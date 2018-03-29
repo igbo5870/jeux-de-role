@@ -94,9 +94,11 @@ class Character
         if ($cible->__getType() == $this->bonus) {
            $cible->life -= ($rand * 1.5);
             echo ($rand * 1.5);
+            echo " " . $cible->life;
         }else{
             $cible->life -= $rand ;
             echo $rand;
+            echo " " . $cible->life;
         }       
     }
 }
