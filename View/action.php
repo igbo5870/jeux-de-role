@@ -14,25 +14,18 @@
         <?php if($i%2 != 0){ ?>
         <p class="action-whoAttack">
             <?php
-                //Combat Héro1 Vs. Monster1
-                $lifeLess = $arrayMonster[0]->__getLife();
-                if ( $lifeLess === 0) {             
-                    echo $nameHero1 ." attaque ". $nameMonster1 .", ". $nameMonster1 .' est mort!';
-                    $dieMonster = 1;
-                    $statutLife = false;             
-                }else{
-                    echo $nameHero1 ." attaque ". $nameMonster1;
-                }
-
                 switch ($dieMonster) {
+                    //Combat Héro1 Vs. Monster1
                     case 0:
-                        $arrayHero[0]->attaquer($arrayMonster[0]);
-                        break;
-                    case 1:
-                        $arrayHero[0]->attaquer($arrayMonster[1]);
-                        break;
-                    case 2:
-                        $arrayHero[0]->attaquer($arrayMonster[2]);
+                        $attak = $arrayHero[0]->attaquer($arrayMonster[0]);
+                        $lifeLess = $arrayMonster[0]->__getLife();
+                        if ( $lifeLess === 0) {             
+                            echo $nameHero1 ." attaque ". $nameMonster1 .", ". $nameMonster1 .' est mort!';
+                            $dieMonster = 1;
+                            $statutLife = false;             
+                        }else{
+                            echo $nameHero1 ." attaque ". $nameMonster1;
+                        }
                         break;
                 }
             ?>
@@ -44,25 +37,24 @@
     <div class="notvisible">
         <p class="number-damage">Coup portée: 
         <?php
-            echo $arrayHero[0]->attaquer($arrayMonster[0]);
+            echo $attak;
         ?>
         </p>
         <?php }else{ ?>
         <p class="action-whoAttack">
             <?php
-                //Combat Monster1 Vs. Hero1
-                $lifeLess = $arrayHero[0]->__getLife();
-                if ( $lifeLess === 0) {             
-                    echo $nameMonster1 ." attaque ". $nameHero1.", ". $nameHero1 .' est mort!';
-                    $dieHero = 1;
-                    $statutLife = false;             
-                }else{
-                    echo $nameMonster1 ." attaque ". $nameHero1;
-                }
-
                 switch ($dieMonster) {
+                    //Combat Monster1 Vs. Hero1
                     case 0:
-                        $arrayMonster[0]->attaquer($arrayHero[0]);
+                        $attak = $arrayMonster[0]->attaquer($arrayHero[0]);
+                        $lifeLess = $arrayHero[0]->__getLife();
+                        if ( $lifeLess === 0) {             
+                            echo $nameMonster1 ." attaque ". $nameHero1.", ". $nameHero1 .' est mort!';
+                            $dieHero = 1;
+                            $statutLife = false;             
+                        }else{
+                            echo $nameMonster1 ." attaque ". $nameHero1;
+                        }
                         break;
                     case 1:
                         $arrayMonster[0]->attaquer($arrayHero[1]);
@@ -82,7 +74,7 @@
         <p class="number-damage">
             Coup portée: 
             <?php 
-                echo $arrayMonster[0]->attaquer($arrayHero[0]);
+                echo $attak;
             ?>
         </p>
         <?php }?>
