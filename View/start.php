@@ -26,7 +26,7 @@
                             <h4>Personnage 2:</h4>
                             <div>
                                 <label for="field-perso2">Nom:</label>
-                                <input type="text" id="field-perso2">
+                                <input type="text" name="perso2" id="field-perso2">
                                 <label for="select-perso2">Type:</label>
                                 <select class="select" name="selectPerso2" id="select-perso2">
                                     <option value="Magicien">Magicien</option> 
@@ -40,7 +40,7 @@
                             <h4>Personnage 3:</h4>
                             <div>
                                 <label for="field-perso3">Nom:</label>
-                                <input type="text" id="field-perso3">
+                                <input type="text" name="perso3" id="field-perso3">
                                 <label for="select-perso3">Type:</label>
                                 <select class="select" name="selectPerso3" id="select-perso3">
                                     <option value="Magicien">Magicien</option> 
@@ -72,7 +72,7 @@
                             <h4>Personnage 2:</h4>
                             <div>
                                 <label for="field-perso5">Nom:</label>
-                                <input type="text" id="field-perso5">
+                                <input type="text" name='monster2' id="field-perso5">
                                 <label for="select-perso5">Type:</label>
                                 <select class="select" name="selectPerso5" id="select-perso5">
                                 <option value="Mage noir">Mage noir</option> 
@@ -87,7 +87,7 @@
                             <h4>Personnage 3:</h4>
                             <div>
                                 <label for="field-perso6" >Nom:</label>
-                                <input type="text" id="field-perso6">
+                                <input type="text" name='monster3' id="field-perso6">
                                 <label for="select-perso6">Type:</label>
                                 <select class="select" name="selectPerso6" id="select-perso6">
                                 <option value="Mage noir">Mage noir</option> 

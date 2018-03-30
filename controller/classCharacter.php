@@ -92,9 +92,8 @@ class Character
     public function attaquer($cible){
         $rand = rand($this->__getStrengthMin(), $this->__getStrengthMax());
         if ($cible->__getType() == $this->bonus) {
-           $cible->life -= ($rand * 1.5);
-            return ($rand * 1.5);
-            
+            $cible->life -= ($rand * 1.5);
+            return ($rand * 1.5);           
         }else{
             $cible->life -= $rand;
             return $rand;

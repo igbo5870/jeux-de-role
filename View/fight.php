@@ -9,49 +9,15 @@
     <h2>Déroulé du combat</h2>
     <hr/>
     <?php  
-
-        if(!isset($_POST['submit']) )
-        {
-            //Data hero
-            $nameHero = $_POST['perso1'];
-            $typeHero = $_POST['classPerso1'];
-            
-            switch($typeHero){
-                case 'Magicien' : $hero1 = new Magician($nameHero);
-                    ;break;
-                case 'Elfe' : $hero1 = new Elf($nameHero);
-                    ;break;
-                case 'Nain' : $hero1 = new Dwarf($nameHero);
-                    ;break;
-                case 'Guerrier' : $hero1 = new Warrior($nameHero);
-                    ;break;
-            }
-
-            // Data monster
-            $nameMonster = $_POST['monster1'];
-            $typeMonster = $_POST['selectPerso4'];
-
-            switch($typeMonster){
-                case 'Mage noir' : $monster1 = new BlackMagus($nameMonster);
-                    ;break;
-                case 'Orque' : $monster1 = new Orc($nameMonster);
-                    ;break;
-                case 'Gobelin' : $monster1 = new Goblin($nameMonster);
-                    ;break;
-                case 'Ombre noir' : $monster1 = new BlackShadow($nameMonster);
-                    ;break;
-                case 'Sauron' : $monster1 = new Sauron($nameMonster);
-                    ;break;
-            }
-        }
+        include ('selectCharacter.php');
     ?>
     <?php
-    include ('action.php');
+        include ('action.php');
     ?>    
     <h2>Fin du combat</h2>
     <hr/>
     <?php
-        if ($monster1->__getLife() == 0) {
+        if ($arrayMonster[0]->__getLife() == 0) {
             echo '<div class="result-fight"><p>Victoire !</p><p>Vous avez vaincu votre ennemi.</p></div>';
         }else{
             echo '<div class="result-fight"><p>Défaite !</p><p>Vous avez étais vaincu.</p></div>';

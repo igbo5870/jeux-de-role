@@ -14,13 +14,26 @@
         <?php if($i%2 != 0){ ?>
         <p class="action-whoAttack">
             <?php
-                $attak = $hero1->attaquer($monster1);
-                $lifeLess = $monster1->__getLife();
-                if ( $lifeLess <= 0) {             
-                    echo $nameHero ." attaque ". $nameMonster .", ". $nameMonster .' est mort!';
-                    $statutLife = false;
+                //Combat Héro1 Vs. Monster1
+                $lifeLess = $arrayMonster[0]->__getLife();
+                if ( $lifeLess === 0) {             
+                    echo $nameHero1 ." attaque ". $nameMonster1 .", ". $nameMonster1 .' est mort!';
+                    $dieMonster = 1;
+                    $statutLife = false;             
                 }else{
-                    echo $nameHero ." attaque ". $nameMonster;
+                    echo $nameHero1 ." attaque ". $nameMonster1;
+                }
+
+                switch ($dieMonster) {
+                    case 0:
+                        $arrayHero[0]->attaquer($arrayMonster[0]);
+                        break;
+                    case 1:
+                        $arrayHero[0]->attaquer($arrayMonster[1]);
+                        break;
+                    case 2:
+                        $arrayHero[0]->attaquer($arrayMonster[2]);
+                        break;
                 }
             ?>
             <img class="icones" src="image/iconedown.png" alt="details visible" width= "30" height="30">
@@ -30,20 +43,33 @@
     <!-- Action odd 'impair' <<<< BEGIN >>>> -->    
     <div class="notvisible">
         <p class="number-damage">Coup portée: 
-        <?php echo $attak; ?>
-        </p>
-        <?php 
-        }else{
+        <?php
+            echo $arrayHero[0]->attaquer($arrayMonster[0]);
         ?>
+        </p>
+        <?php }else{ ?>
         <p class="action-whoAttack">
             <?php
-                $attak = $monster1->attaquer($hero1);
-                $lifeLess = $hero1->__getLife();
-                if ($lifeLess === 0) {             
-                    echo $nameMonster ." attaque ". $nameHero.", ". $nameHero .' est mort!';
-                    $statutLife = false;
+                //Combat Monster1 Vs. Hero1
+                $lifeLess = $arrayHero[0]->__getLife();
+                if ( $lifeLess === 0) {             
+                    echo $nameMonster1 ." attaque ". $nameHero1.", ". $nameHero1 .' est mort!';
+                    $dieHero = 1;
+                    $statutLife = false;             
                 }else{
-                    echo $nameMonster ." attaque ". $nameHero;
+                    echo $nameMonster1 ." attaque ". $nameHero1;
+                }
+
+                switch ($dieMonster) {
+                    case 0:
+                        $arrayMonster[0]->attaquer($arrayHero[0]);
+                        break;
+                    case 1:
+                        $arrayMonster[0]->attaquer($arrayHero[1]);
+                        break;
+                    case 2:
+                        $arrayMonster[0]->attaquer($arrayHero[2]);
+                        break;
                 }
             ?>
             <img class="icones" src="image/iconedown.png" alt="details visible" width= "30" height="30">
@@ -55,7 +81,9 @@
     <div class="notvisible">
         <p class="number-damage">
             Coup portée: 
-            <?php echo $attak; ?>
+            <?php 
+                echo $arrayMonster[0]->attaquer($arrayHero[0]);
+            ?>
         </p>
         <?php }?>
         <div class="fight-character">
@@ -69,22 +97,22 @@
                         <th>Vie</th>
                     </tr>
                     <tr>
-                        <td><?php echo $nameHero ?></td>
-                        <td><?php echo $typeHero ?></td>
+                        <td><?php echo $nameHero1 ?></td>
+                        <td><?php echo $typeHero1 ?></td>
                         <td><?php echo "1";?></td>
-                        <td><?php echo $hero1->__getLife() ?></td>
+                        <td><?php echo $arrayHero[0]->__getLife() ?></td>
                     </tr>
                     <tr>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
+                        <td><?php echo $nameHero2?></td>
+                        <td><?php echo $typeHero2 ?></td>
+                        <td><?php echo "1";?></td>
+                        <td><?php echo $arrayHero[1]->__getLife() ?></td>
                     </tr>
                     <tr>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
+                        <td><?php echo $nameHero3?></td>
+                        <td><?php echo $typeHero3 ?></td>
+                        <td><?php echo "1";?></td>
+                        <td><?php echo $arrayHero[2]->__getLife() ?></td>
                     </tr>
                 </table>
             </div>   
@@ -98,22 +126,22 @@
                         <th>Vie</th>
                     </tr>
                     <tr>
-                        <td><?php echo $nameMonster ?></td>
-                        <td><?php echo $typeMonster ?></td>
-                        <td>1</td>
-                        <td><?php echo $monster1->__getLife() ?></td>
+                        <td><?php echo $nameMonster1 ?></td>
+                        <td><?php echo $typeMonster1 ?></td>
+                        <td><?php echo "1";?></td>
+                        <td><?php echo $arrayMonster[0]->__getLife() ?></td>
                     </tr>
                     <tr>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
+                        <td><?php echo $nameMonster2 ?></td>
+                        <td><?php echo $typeMonster2 ?></td>
+                        <td><?php echo "1";?></td>
+                        <td><?php echo $arrayMonster[1]->__getLife() ?></td>
                     </tr>
                     <tr>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
+                        <td><?php echo $nameMonster3 ?></td>
+                        <td><?php echo $typeMonster3 ?></td>
+                        <td><?php echo "1";?></td>
+                        <td><?php echo $arrayMonster[2]->__getLife() ?></td>
                     </tr>
                 </table>
             </div>
